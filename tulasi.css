@@ -1,0 +1,126 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #F0F8FF,#FAEBD7,#F0FFFF);
+}
+
+header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    margin: 3%;
+}
+
+#input-screen{
+    width: 410px;
+    height: 200px;
+    margin: 0 0 2% 0;
+    border: 1px solid black;
+}
+
+#btns{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 2%;
+    column-gap: 1%;
+}
+
+button{
+    /* width: 60px; */
+    height: 39.5px;
+}
+
+#calc{
+    width: 45%;
+    display: flex;
+    border: 2px solid black;
+    padding: 1%;
+    background: linear-gradient(to right, rgb(211, 222, 222),rgba(211, 222, 222,0.5));
+}
+
+/* History */
+
+#history{
+    width: 100%;
+    /* width: 150px; */
+    height: 300px;
+    border: 1px solid black;
+    margin-left: 2%;
+    /*background: linear-gradient(to top, rgb(7, 181, 245),rgb(227, 57, 148),rgba(7, 181, 245,0.4),rgba(227, 57, 148,0.4)) */
+}
+
+#history p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+#historyData{
+    margin: 10% 0 0 8%;
+    font-size: 20px;
+    display: block;
+}
+
+/* input screen */
+
+#input-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#currentInput{
+    font-size: 40px;
+}
+
+#previousInput{
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+
+/********** MEDIA QUERIES ***********/
+
+
+/********** Tablets & Ipads ********/
+@media (min-width:769px) and (max-width: 1299px){
+    #calc{
+        width: 40%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    #input-screen{
+        width: 100%;
+        height: 80px;
+    }
+
+    #history{
+        margin: 10% 0 0 0;
+    }
+}
+
+
+/********** MOBILE PHONES **********/
+@media (max-width: 768px){
+    #calc{
+        width: 60%;
+        flex-direction: column;
+    }
+
+    #input-screen{
+        width: 100%;
+        height: 80px;
+    }
+
+    #history{
+        margin: 10% 0 0 0;
+    }
+}
